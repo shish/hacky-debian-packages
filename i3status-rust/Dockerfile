@@ -13,5 +13,6 @@ RUN install -D -m 0755 man/i3status-rs.1 /app/pkg/usr/share/man/man1/i3status-rs
 RUN cp -rv files /app/pkg/usr/share/i3status-rust
 
 COPY control /app/pkg/DEBIAN/control
+RUN sed -i "s/Version: 0.0.0/Version: 0.0.$(date +%Y%m%d.%H%M%S)/" /app/pkg/DEBIAN/control
 #RUN find /app/pkg && false
 RUN dpkg-deb --build pkg i3status-rust.deb

@@ -19,6 +19,7 @@ RUN meson install -C build --destdir=/app/pkg
 
 COPY control /app/pkg/DEBIAN/control
 COPY postinst /app/pkg/DEBIAN/postinst
+RUN sed -i "s/Version: 0.0.0/Version: 0.0.$(date +%Y%m%d.%H%M%S)/" /app/pkg/DEBIAN/control
 #RUN find /app/pkg && false
 RUN dpkg-deb --build pkg swayosd.deb
 # && dpkg-name -o *.deb
