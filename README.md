@@ -1,7 +1,8 @@
 
-I like swayosd, but I got tired of my Arch install breaking and went back to debian o.o
+I gave up on Arch and went back to Debian, but I miss a couple of
+packages from the AUR, so let's make some ugly .deb packages
 
 ```
-./build.sh
-sudo apt install ./swayosd*.deb
+./build.sh swayosd
+sudo apt install ./swayosd.deb
 ```
