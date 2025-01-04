@@ -1,0 +1,6 @@
+Package: swayosd
+Version: 0.0.0
+Architecture: amd64
+Depends: libgtk4-layer-shell0, brightnessctl
+Maintainer: Shish <shish@shishnet.org>
+Description: SwayOSD
