@@ -8,14 +8,17 @@ RUN apt update && apt install -y \
     libpulse-dev libinput-dev
 RUN git clone https://github.com/ErikReider/SwayOSD /app
 WORKDIR /app
+
 # meson's default settings put .service files in /usr/local/lib/x64_64-linux-gnu/systemd/
 # but systemd looks in /usr/lib/systemd/
 RUN meson setup --prefix=/usr --libdir=lib build
 RUN --mount=type=cache,target=/usr/local/cargo/registry \
     --mount=type=cache,target=/app/target \
     ninja -C build
-RUN meson install -C build --destdir=/app/swayosd
-COPY control /app/swayosd/DEBIAN/control
-COPY postinst /app/swayosd/DEBIAN/postinst
-RUN dpkg-deb --build swayosd
-# && dpkg-name -o swayosd.deb
+RUN meson install -C build --destdir=/app/pkg
+
+COPY control /app/pkg/DEBIAN/control
+COPY postinst /app/pkg/DEBIAN/postinst
+#RUN find /app/pkg && false
+RUN dpkg-deb --build pkg swayosd.deb
+# && dpkg-name -o *.deb
