@@ -1,4 +1,6 @@
 #!/bin/sh
+set -eux
+
 if [ ! -d "$1" ]; then
   echo "Usage: $0 <package directory>"
   exit 1
