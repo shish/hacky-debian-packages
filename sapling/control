@@ -1,0 +1,6 @@
+Package: sapling
+Version: 0.0.0
+Architecture: amd64
+Depends: 
+Maintainer: Shish <shish@shishnet.org>
+Description: Sapling SCM
