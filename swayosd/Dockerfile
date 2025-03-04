@@ -6,8 +6,10 @@ RUN apt update && apt install -y \
     libevdev-dev libglib2.0-dev libgdk-pixbuf-2.0-dev \
     libcairo2-dev libpango1.0-dev libgtk-4-dev libgtk4-layer-shell-dev \
     libpulse-dev libinput-dev
-RUN git clone https://github.com/ErikReider/SwayOSD /app
+#RUN git clone https://github.com/ErikReider/SwayOSD /app
+RUN git clone https://github.com/shish/SwayOSD /app && echo 1
 WORKDIR /app
+RUN git checkout ignore-caps-lock-backend
 
 # meson's default settings put .service files in /usr/local/lib/x64_64-linux-gnu/systemd/
 # but systemd looks in /usr/lib/systemd/

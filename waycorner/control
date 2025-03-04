@@ -1,6 +1,6 @@
-Package: sapling
+Package: waycorner
 Version: 0.0.0
 Architecture: amd64
-Depends: libpython3.12-dev
+Depends: 
 Maintainer: Shish <shish@shishnet.org>
-Description: Sapling SCM
+Description: waycorner

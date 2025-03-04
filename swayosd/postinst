@@ -1,2 +1,3 @@
 #!/bin/sh
-systemctl enable --now swayosd-libinput-backend.service
+systemctl enable swayosd-libinput-backend.service
+systemctl restart swayosd-libinput-backend.service
