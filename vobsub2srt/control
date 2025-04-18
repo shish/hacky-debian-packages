@@ -1,0 +1,6 @@
+Package: vobsub2srt
+Version: 0.0.0
+Architecture: amd64
+Depends: tesseract-ocr-eng
+Maintainer: Shish <shish@shishnet.org>
+Description: VobSub2SRT
