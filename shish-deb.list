@@ -1,0 +1,1 @@
+deb [signed-by=/etc/apt/keyrings/shish-deb.asc] https://deb.shish.io/repo /

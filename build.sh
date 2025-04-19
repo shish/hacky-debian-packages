@@ -6,5 +6,7 @@ if [ ! -d "$1" ]; then
   exit 1
 fi
 PKG=$1
+mkdir -p repo
 docker build $PKG
-docker run --rm $(docker build -q $PKG) cat $(basename $PKG).deb > $(basename $PKG).deb
+docker run --rm $(docker build -q $PKG) cat $(basename $PKG).deb > repo/$(basename $PKG).deb
+./repo.sh
