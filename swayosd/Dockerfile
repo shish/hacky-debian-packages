@@ -1,4 +1,4 @@
-FROM debian:testing
+FROM debian:trixie
 RUN apt update && apt install -y \
     build-essential meson ninja-build \
     cargo git pkg-config libudev-dev \

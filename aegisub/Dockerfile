@@ -1,4 +1,4 @@
-FROM debian:testing
+FROM debian:trixie
 RUN apt update && apt install -y \
     git build-essential pkg-config meson ninja-build \
 	gettext intltool \

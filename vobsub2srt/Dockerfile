@@ -1,4 +1,4 @@
-FROM debian:testing
+FROM debian:trixie
 RUN apt update && apt install -y \
     build-essential git libtiff5-dev libtesseract-dev tesseract-ocr-eng cmake pkg-config
 #RUN git clone https://github.com/ruediger/VobSub2SRT /app

@@ -1,4 +1,4 @@
-FROM debian:testing
+FROM debian:trixie
 RUN apt update && apt install -y \
     build-essential cargo git yarnpkg nodejs \
     python3.12-full python3.12-dev python3-distutils-extra \

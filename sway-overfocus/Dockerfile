@@ -1,4 +1,4 @@
-FROM debian:testing
+FROM debian:trixie
 RUN apt update && apt install -y \
     build-essential cargo git
 RUN git clone https://github.com/korreman/sway-overfocus /app

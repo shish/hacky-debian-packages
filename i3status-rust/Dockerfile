@@ -1,4 +1,4 @@
-FROM debian:testing
+FROM debian:trixie
 RUN apt update && apt install -y \
     build-essential cargo git \
     pkg-config libssl-dev libpulse-dev libsensors-dev pandoc
