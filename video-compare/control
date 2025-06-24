@@ -1,0 +1,6 @@
+Package: video-compare
+Version: 0.0.0
+Architecture: amd64
+Depends: libsdl2-ttf-2.0-0
+Maintainer: Shish <shish@shishnet.org>
+Description: Video Compare
