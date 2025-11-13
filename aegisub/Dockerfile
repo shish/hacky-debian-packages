@@ -20,7 +20,7 @@ RUN meson install -C build --skip-subprojects luajit
 RUN install -D -m 0755 build/aegisub /app/pkg/usr/bin/aegisub
 
 COPY control /app/pkg/DEBIAN/control
-RUN sed -i "s/Version: 0.0.0/Version: 0.0.$(date +%Y%m%d.%H%M%S)/" /app/pkg/DEBIAN/control
+RUN sed -i "s/Version: 0.0.0/Version: 3.4.$(date +%Y%m%d.%H%M%S)/" /app/pkg/DEBIAN/control
 #RUN find /app/pkg && false
 RUN dpkg-deb --build pkg aegisub.deb
 # && dpkg-name -o *.deb
