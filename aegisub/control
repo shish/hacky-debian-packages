@@ -1,6 +1,6 @@
 Package: aegisub
 Version: 0.0.0
 Architecture: amd64
-Depends: 
+Depends: libwxgtk-gl3.2-1t64, libffms2-5
 Maintainer: Shish <shish@shishnet.org>
 Description: AegiSub
