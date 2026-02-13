@@ -1,0 +1,5 @@
+Types: deb
+URIs: https://deb.shish.io/repo/
+Suites: /
+Components: 
+Signed-By: /etc/apt/keyrings/shish-deb.asc
