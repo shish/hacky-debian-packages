@@ -1,11 +1,16 @@
 FROM debian:trixie
 RUN apt update && apt install -y \
-    build-essential cargo git \
+    build-essential git curl \
     pkg-config libssl-dev libpulse-dev libsensors-dev pandoc
+
+# Install rustup and latest stable Rust toolchain
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain stable
+ENV PATH="/root/.cargo/bin:${PATH}"
+
 RUN git clone https://github.com/greshake/i3status-rust /app
 
 WORKDIR /app
-RUN --mount=type=cache,target=/usr/local/cargo/registry \
+RUN --mount=type=cache,target=/root/.cargo/registry \
     --mount=type=cache,target=/app/target \
     cargo build --release && cargo xtask generate-manpage && cp target/release/i3status-rs ./
 RUN install -D -m 0755 i3status-rs /app/pkg/usr/bin/i3status-rs
