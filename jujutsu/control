@@ -1,0 +1,9 @@
+Package: jujutsu
+Version: 0.0.0
+Architecture: amd64
+Depends: git (>= 2.41.0)
+Maintainer: Shish <shish@shishnet.org>
+Description: A Git-compatible version control system
+ jj is a Git-compatible version control system that is both simple
+ and powerful. It provides an intuitive interface while maintaining
+ full compatibility with Git repositories.
