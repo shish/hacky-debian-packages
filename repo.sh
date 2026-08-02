@@ -6,5 +6,7 @@ rm -rf Packages Release InRelease
 
 apt-ftparchive packages . > Packages
 apt-ftparchive release . > Release
+
+export GPG_TTY=$(tty)
 # gpg --armor --export shish+deb@shishnet.org > shish-deb.asc
 cat Release | gpg -a -s --clearsign --default-key shish+deb@shishnet.org - > InRelease
